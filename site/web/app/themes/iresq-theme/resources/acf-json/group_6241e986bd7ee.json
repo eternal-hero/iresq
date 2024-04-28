@@ -1,0 +1,43 @@
+{
+    "key": "group_6241e986bd7ee",
+    "title": "Product Category: Options",
+    "fields": [
+        {
+            "key": "field_6241e996ee6d0",
+            "label": "Activate Alternate Product Category Layout?",
+            "name": "activate_alternate_product_category_layout",
+            "type": "true_false",
+            "instructions": "Toggle this field to update the product category parent pages to their new layout.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "global-fields"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1648486909
+}

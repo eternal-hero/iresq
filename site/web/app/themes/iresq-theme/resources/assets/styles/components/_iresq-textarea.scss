@@ -1,0 +1,30 @@
+.iresq-textarea-input {
+  display: grid;
+  grid-template-areas: "textarea_label" "textarea_input";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+
+  .textarea-label {
+    grid-area: textarea_label;
+    margin-left: 20px;
+  }
+
+  .textarea-input {
+    grid-area: textarea_input;
+    box-sizing: border-box;
+    border: 1px solid $color-ash;
+    border-radius: 20px;
+    background-color: $color-white;
+    color: $color-ash;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 26px;
+    padding: 7.5px 18.5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    resize: none;
+  }
+}

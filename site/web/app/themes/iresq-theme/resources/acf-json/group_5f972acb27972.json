@@ -1,0 +1,134 @@
+{
+    "key": "group_5f972acb27972",
+    "title": "Post - Single Product",
+    "fields": [
+        {
+            "key": "field_5f9730bdb1a3e",
+            "label": "Product ID",
+            "name": "product_id",
+            "type": "text",
+            "instructions": "ID for FileMaker system (not currently in use, but it was given in the product import so it's here if it's ever needed)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6026f223be4c2",
+            "label": "Single Product Turnaround Time",
+            "name": "single_product_turnaround_time",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "7-10 Business Days": "7-10 Business days",
+                "1-3 Business Days": "1-3 Business Days",
+                "5-7 Business Days": "5-7 Business Days"
+            },
+            "default_value": "1-3 Business Days",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "label",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6026f246be4c3",
+            "label": "Single Product Complexity",
+            "name": "single_product_complexity",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "high": "High"
+            },
+            "default_value": "high",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "array",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6048d5129fd8c",
+            "label": "Shipping Device Type",
+            "name": "single_shipping_device_type",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6048d51f9fd8d",
+            "label": "Short Name",
+            "name": "single_short_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "comments"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1628622255
+}

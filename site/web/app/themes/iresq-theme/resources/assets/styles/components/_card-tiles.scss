@@ -1,0 +1,198 @@
+.card-tiles-section {
+  display: grid;
+  grid-template-columns: repeat(3, 445px);
+  grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
+  justify-items: center;
+  justify-content: center;
+  gap: 30px 20px;
+
+  @media (max-width: 1400px) {
+    grid-template-columns: repeat(auto-fill, 445px);
+  }
+
+  .card {
+    cursor: pointer;
+    position: relative;
+    width: 445px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: $color-white;
+    box-shadow: 0 4px 9px 0 rgba(51, 49, 50, 0.4);
+    z-index: 5;
+    transition: all 0.5s;
+
+    &.active {
+      cursor: default;
+
+      .toggle {
+        transform: translateX(370px);
+
+        &::after {
+          transform: rotate(225deg);
+          background-color: $color-white;
+          left: 49%;
+        }
+
+        &::before {
+          transform: rotate(225deg);
+          background-color: $color-white;
+          top: 48%;
+        }
+      }
+
+      .card-body-content {
+        top: 0;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 10px 25px 0 rgba(51, 49, 50, 0.7);
+    }
+
+    .card-header {
+      margin: 16px;
+      height: fit-content;
+    }
+
+    .toggle {
+      cursor: pointer;
+      position: absolute;
+      margin-left: 16px;
+      height: 52px;
+      width: 52px;
+      z-index: 15;
+      top: 5px;
+      transition: all 1s;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $color-fire;
+        height: 52px;
+        width: 2px;
+        margin: 0 auto;
+        left: 49%;
+        transition: all 1s;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $color-fire;
+        height: 2px;
+        width: 52px;
+        margin: auto 0;
+        top: 48%;
+        transition: all 1s;
+      }
+    }
+
+    .card-body-image {
+      position: relative;
+
+      .card-image {
+        position: absolute;
+        height: auto;
+        width: 90%;
+        right: -50px;
+        top: -10px;
+      }
+
+      .card-description {
+        position: absolute;
+      }
+    }
+
+    .card-body-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      background-color: $color-fire;
+      color: $color-white;
+      width: auto;
+      height: 100%;
+      padding: 16px;
+      z-index: 10;
+      top: 350px;
+      transition: all 1s;
+
+      p {
+        margin-top: 55px;
+      }
+
+      .iresq-button {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &#services-devices-card-tiles {
+    margin-bottom: 150px;
+  }
+
+  &.vertical {
+    grid-template-columns: repeat(4, 270px);
+    padding-bottom: 60px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(auto-fill, 270px);
+      grid-template-rows: auto;
+    }
+
+    .card {
+      background-color: $color-marble;
+      width: 270px;
+
+      .card-body-image {
+        .card-image {
+          width: 140%;
+          right: -100px;
+          top: 80px;
+        }
+      }
+
+      &.active {
+        .toggle {
+          transform: translateX(195px);
+
+          &::after {
+            transform: rotate(135deg);
+            background-color: $color-white;
+            left: 49%;
+          }
+
+          &::before {
+            transform: rotate(135deg);
+            background-color: $color-white;
+            top: 48%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .card-tiles-section {
+    .card {
+      width: 80%;
+
+      .card-body-content {
+        top: 390px;
+      }
+
+      &.active {
+        .toggle {
+          transform: translateX(275px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .card-tiles-section {
+    grid-template-columns: repeat(auto-fill, 350px);
+  }
+}

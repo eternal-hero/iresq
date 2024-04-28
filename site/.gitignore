@@ -1,0 +1,34 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+
+
+# WP-CLI
+wp-cli.local.yml
+
+# When you sync down to your local development environment a
+# database backup is performed with 'wp db export'. This helps
+# you safely recover your database if you accidentally sync,
+# and by making this modification to '.gitignore' you're
+# ensuring that your local database export doesn't get 
+# commited to your git repository 
+*_development*.sql

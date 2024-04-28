@@ -1,0 +1,45 @@
+{
+    "key": "group_6488c20a1bbc1",
+    "title": "iResQ Team Settings",
+    "fields": [
+        {
+            "key": "field_6488c21a1c8af",
+            "label": "iResQ Team Page Header Title",
+            "name": "iresq_team_page_header_title",
+            "type": "text",
+            "instructions": "Add a title to the team listing page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-iresq-team-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1686684231
+}

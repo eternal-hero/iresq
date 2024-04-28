@@ -1,0 +1,43 @@
+{
+    "key": "group_6122eed3c4f0d",
+    "title": "User: FileMaker Integration",
+    "fields": [
+        {
+            "key": "field_6122ef78ee3b0",
+            "label": "Account ID",
+            "name": "filemaker_account_id",
+            "type": "text",
+            "instructions": "You will see this as the \"Acct #\" in FileMaker and is required for showing historical FileMaker information",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "user_form",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1629679745
+}

@@ -1,0 +1,55 @@
+.iresq-select-input {
+  padding: 7px 10px;
+  max-width: 322px;
+  min-width: 225px;
+  width: 25%;
+  position: relative;
+
+  .select-label {
+    margin-left: 15px;
+  }
+
+  .select-wrapper {
+    display: grid;
+    grid-template-areas: "select_input";
+    align-items: center;
+    border: 1px solid $color-ash;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 41px;
+
+    .select-input {
+      cursor: pointer;
+      grid-area: select_input;
+      background: $color-white;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      outline: none;
+      border: none;
+      margin-left: 12px;
+      margin-right: 10px;
+      font-size: 18px;
+      letter-spacing: 0;
+      font-family: "Red Hat Display", sans-serif;
+      line-height: 26px;
+      color: $color-ash;
+      font-weight: 700;
+      height: 26px;
+      width: 90%;
+
+      option {
+        min-height: 0;
+      }
+    }
+  }
+
+  .select-icon {
+    pointer-events: none;
+    position: absolute;
+    font-size: 14px;
+    color: $color-ash;
+    top: 38px;
+    right: 25px;
+  }
+}

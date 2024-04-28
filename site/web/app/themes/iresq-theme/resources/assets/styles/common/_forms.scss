@@ -1,0 +1,125 @@
+.button-left {
+  .wpforms-submit-container {
+    text-align: unset !important;
+  }
+}
+
+.wysiwyg-form-wrapper {
+  width: 50%;
+  margin: 0 auto;
+
+  @media (max-width: 1000px) {
+    width: 80%;
+  }
+}
+
+.wpforms-form {
+  label {
+    color: #000;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 14px;
+    font-weight: 100 !important;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin: 0 0 2px 20px;
+
+    .wpforms-required-label {
+      color: black;
+    }
+  }
+
+  textarea {
+    border: 1px solid #333132;
+    border-radius: 20px;
+    background-color: #fff;
+    margin-top: 5px;
+    resize: none;
+    padding: 10px 15px;
+  }
+
+  select {
+    cursor: pointer;
+    height: 41px;
+    border: 1px solid #333132;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #333132;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 26px;
+    padding-left: 17px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .select-field {
+    label {
+      &::after {
+        content: "";
+        background-image: url("/app/themes/iresq-theme/resources/assets/images/chevron-circle-down.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        color: #000;
+        position: absolute;
+        right: 17px;
+        top: 42px;
+        z-index: 1;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  .wpforms-submit-container {
+    text-align: center;
+    margin: 25px auto -30px;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  input {
+    height: 41px;
+    border: 1px solid #333132;
+    border-radius: 20px;
+    background-color: #fff;
+    padding-left: 19px;
+  }
+
+  .wpforms-submit {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border-radius: 29px;
+    width: fit-content;
+    outline: none;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    height: 47px;
+    padding: 0 22px;
+    background: linear-gradient(113deg, $color-fire 85%, $color-ember 100%);
+    color: $color-white;
+    letter-spacing: 0;
+    border: 2px solid $color-fire;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $color-fire;
+      background: $color-white;
+    }
+  }
+}

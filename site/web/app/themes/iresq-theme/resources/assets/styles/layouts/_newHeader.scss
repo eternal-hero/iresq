@@ -1,0 +1,350 @@
+.banner-v2 {
+  display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+  
+  .business-customer-link {
+    display: block;
+    background-color: #e8e8e8;
+    border-radius: 50px;
+    padding: 0.5em 2em;
+    margin-right: 1em;
+    text-align: right;
+  }
+
+  .business-customer-link,
+  .my-account-link {
+    &:hover * {
+      text-decoration: underline;
+    }
+  }
+
+  .desktop-container {
+    padding: 15px 50px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .top-menu {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      & > .has-sep {
+        position: relative;
+        margin-right: 1em;
+
+        &::after {
+          content: '';
+          display: block;
+          height: 50px;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 1px;
+          background-color: #000;
+        }
+      }
+    }
+
+    .top-menu .my-account-link {
+      display: flex;
+      align-items: center;
+    }
+
+    .top-menu .my-account-text-container {
+      text-align: right;
+      font-family: 'Red Hat Display', sans-serif;
+      color: #000;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    .top-menu .my-account-text-container .lead-text,
+    .top-menu .my-account-text-container .sub-text,
+    .top-menu .business-customer-container .lead-text {
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .top-menu .my-account-text-container .sub-text,
+    .top-menu .business-customer-container .sub-text {
+      font-size: 12px;
+      font-weight: 300;
+    }
+
+    .shopping-link-wrapper{
+      position: relative;
+      margin-right: 20px;
+    }
+
+    .my-account-link {
+      position: relative;
+    }
+
+    .my-account-icon {
+      margin-right: 1em;
+    }
+    
+    .shopping-link-wrapper .fa-shopping-cart,
+    .top-menu .fa-user-circle {
+      height: 32px;
+      width: 32px;
+      color: #000;
+    }
+
+    .search-form {
+      position: relative;
+    }
+
+    .search-form .fa-search {
+      height: 32px;
+      width: 32px;
+      position: relative;
+      top: -2px;
+      left: 0;
+      cursor: pointer;
+    }
+
+    .business-customer-link {
+      display: flex;
+      align-items: center;
+    }
+
+    .business-customer-icon {
+      margin-right: 1em;
+    }
+    
+    .shopping-link-wrapper .cart-count {
+      position: absolute;
+      top: 47%;
+      left: 66%;
+      height: 18px;
+      min-width: 18px;
+      max-width: fit-content;
+      background: #b2111e;
+      border-radius: 9px;
+      box-shadow: -2px -1px 2px 0 rgba(128, 139, 147, 0.5);
+      font-size: 12px;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 18px;
+      text-align: center;
+    }
+
+    .logo {
+      flex-shrink: 1;
+    }
+
+    .logo img {
+      width: 262px;
+      height: auto;
+    }
+
+    .nav-primary-desktop {
+      flex-grow: 1;
+    }
+
+    .nav-primary-desktop .nav {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+
+    .nav-primary-desktop .nav > .menu-item {
+      display: inline-block;
+      margin: 0 0 0 20px;
+      cursor: pointer;
+      position: relative;
+      padding: 20px 10px;
+    }
+
+    .nav-primary-desktop .nav > .menu-item > a {
+      font-family: 'Red Hat Display', sans-serif;
+      color: #000;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 0;
+      line-height: 21px;
+      text-align: center;
+      transition: color .5s;
+    }
+
+    .nav-primary-desktop .nav > .menu-item .sub-menu a {
+      transition: all 0.5s ease;
+    }
+
+    .nav-primary-desktop .nav > .menu-item > a:hover,
+    .nav-primary-desktop .nav > .menu-item .sub-menu a:hover {
+      color: #808a92;
+    }
+
+    .nav-primary-desktop .menu-item .sub-menu {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      transition: all 0.5s ease;
+      padding: 0;
+      margin-top: 0.5em;
+      left: 0;
+      display: none;
+      background: white;
+      z-index: 1;
+      list-style: none;
+      box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.16);
+    }
+
+    .nav-primary-desktop .menu-item:hover .sub-menu {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
+
+    .nav-primary-desktop .menu-item .sub-menu > li {
+      padding: 10px 15px;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+
+    .nav-primary-desktop .nav > .menu-item.button {
+      background: linear-gradient(113deg,#b2111e 85%,#cc4712);
+      color: #fff;
+      letter-spacing: 0;
+      transition: all .5s ease;
+      border: 2px solid #b2111e;
+      width: fit-content;
+      outline: none;
+      font-family: Red Hat Display,sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+      height: 47px;
+      padding: 0 22px;
+      cursor: pointer;
+      border-radius: 29px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-primary-desktop .nav > .menu-item.button:hover {
+      background: #fff;
+    }
+
+    .nav-primary-desktop .nav > .menu-item.button > a {
+      color: #fff;
+      letter-spacing: 0;
+      transition: all .5s ease;
+      width: fit-content;
+      outline: none;
+      font-family: Red Hat Display,sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+      cursor: pointer;
+    }
+
+    .nav-primary-desktop .nav > .menu-item.button:hover > a {
+      color: #b2111e;
+    }
+  }
+
+  .search-field {
+    display: none;
+  }
+
+  .nac-search-form {
+    margin-right: 1em;
+  }
+  
+  .nac-search-form form.search-form {
+    border: none;
+  }
+  
+  .nac-search-form.opened form.search-form {
+      border: 1px solid #333132;
+  }
+
+  .shopping-bag-link--not-scrolling {
+    display: block;
+  }
+
+  .shopping-bag-link--scrolling {
+    display: none;
+  }
+
+  &.is-scrolling {
+    .top-menu {
+      background-color: #e8e8e8;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 54px;
+    }
+
+    .desktop-container {
+      margin-top: 54px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .desktop-container .logo img {
+      width: 200px;
+    }
+
+    .nac-search-form,
+    .shopping-bag-link {
+      display: none;
+    }
+
+    .desktop-container .top-menu > .has-sep::after {
+      height: 35px;
+    }
+    
+    .has-sep.has-last-sep::after {
+      display: none;
+    }
+
+    .business-customer-link {
+      margin-right: 0;
+    }
+
+    .shopping-bag-link--not-scrolling {
+      display: none;
+    }
+
+    .shopping-bag-link--scrolling {
+      display: block;
+      margin-left: 1em;
+      
+      .shopping-link-wrapper {
+        margin-right: 0;
+      }
+    }
+
+    .nav-primary-desktop {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.new-header-filler {
+  height: 68px;
+}
+
+@media (min-width: 1181px) {
+  .banner-v2 {
+    display: block;
+  }
+
+  .new-header-filler {
+    height: 140px;
+  }
+}

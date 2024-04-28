@@ -1,0 +1,39 @@
+{
+    "key": "group_6247241566a9b",
+    "title": "Repair Form",
+    "fields": [
+        {
+            "key": "field_6247242fcefc2",
+            "label": "Repair Form Button",
+            "name": "repair_form_button",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "global-fields"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1648829506
+}

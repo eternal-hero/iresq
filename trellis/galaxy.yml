@@ -1,0 +1,20 @@
+---
+roles:
+  - name: composer
+    src: geerlingguy.composer
+    version: 1.9.0
+
+  - name: ntp
+    src: geerlingguy.ntp
+    version: 2.3.1
+
+  - name: logrotate
+    src: nickhammond.logrotate
+    version: v0.0.5
+
+  - name: swapfile
+    src: oefenweb.swapfile
+    version: v2.0.36
+
+  - src: geerlingguy.mailhog
+    version: 2.3.0

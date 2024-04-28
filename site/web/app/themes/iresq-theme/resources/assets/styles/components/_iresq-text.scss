@@ -1,0 +1,41 @@
+.iresq-text-input {
+  .text-label {
+    margin-left: 15px;
+  }
+
+  .text-input-wrapper {
+    box-sizing: border-box;
+    height: 41px;
+    border: 1px solid $color-ash;
+    border-radius: 20px;
+    display: grid;
+    grid-template-areas: "text_icon text_field";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 7px 10px;
+    max-width: 322px;
+
+    .text-icon {
+      grid-area: text_icon;
+      font-size: 22px;
+      color: $color-ash;
+    }
+
+    .text-input {
+      grid-area: text_field;
+      background: $color-white;
+      border: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      outline: none;
+      margin: 0 12px;
+      font-size: 18px;
+      letter-spacing: 0;
+      font-family: "Red Hat Display", sans-serif;
+      line-height: 26px;
+      color: $color-ash;
+      font-weight: 700;
+    }
+  }
+}

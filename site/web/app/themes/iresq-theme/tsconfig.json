@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "target": "esnext",
+    "module": "esnext",
+    "strict": false,
+    "jsx": "preserve",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["resources/*"],
+      "@scripts/*": ["resources/assets/scripts/*"],
+    },
+  },
+  "include": ["**/*"],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

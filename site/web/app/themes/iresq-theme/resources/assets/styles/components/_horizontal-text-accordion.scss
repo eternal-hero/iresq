@@ -1,0 +1,328 @@
+.horizontal-text-accordion-section {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 450px;
+  grid-template-areas: "heading accordion";
+  padding-bottom: 80px;
+  overflow: hidden;
+
+  &.small {
+    grid-template-rows: 250px;
+
+    .accordion-wrapper {
+      .accordion.active {
+        width: 300px;
+
+        @media (max-width: $screen-sm) {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .heading-wrapper {
+    grid-area: heading;
+    width: 380px;
+    padding-left: 20px;
+    margin: 0 50px 0 auto;
+  }
+
+  .accordion-wrapper {
+    grid-area: accordion;
+    display: flex;
+    color: $color-marble;
+    margin-left: auto;
+    justify-content: flex-end;
+
+    .accordion {
+      cursor: pointer;
+      position: relative;
+      background: linear-gradient(240deg, $color-ember 0%, $color-fire 100%);
+      border-radius: 8px;
+      width: 46px;
+      margin-right: 15px;
+      transition: all 1s;
+
+      h5.accordion-heading {
+        white-space: nowrap;
+        margin-bottom: 24px;
+
+        &.vertical {
+          transform: rotate(-90deg);
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -5px;
+        }
+
+        &.horizontal {
+          position: relative;
+          bottom: 0;
+          margin-top: 0;
+        }
+      }
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      .content-wrapper {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 1s;
+
+        .fade {
+          opacity: 0;
+          transition: all 0.2s;
+
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
+
+      &.active {
+        background: radial-gradient(
+          circle,
+          $color-ember 0%,
+          rgba(204, 71, 18, 0) 100%
+        ),
+          linear-gradient(3.89deg, $color-ember 0%, $color-fire 100%);
+        padding: 50px 70px;
+        width: 500px;
+
+        h5.accordion-heading {
+          &.vertical {
+            bottom: -100%;
+          }
+        }
+
+        .content-wrapper {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &#front-page-horizontal-text-accordion {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .horizontal-text-accordion-section {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 400px;
+    grid-template-areas:
+      "heading"
+      "accordion";
+
+    .heading-wrapper {
+      text-align: center;
+      width: 80%;
+      margin: 10px auto 0;
+      padding: 0;
+    }
+
+    .accordion-wrapper {
+      grid-area: accordion;
+      display: flex;
+      color: $color-marble;
+      margin-left: auto;
+      justify-content: flex-end;
+      padding: 0;
+
+      .accordion {
+        cursor: pointer;
+        position: relative;
+        background: linear-gradient(240deg, $color-ember 0%, $color-fire 100%);
+        border-radius: 8px;
+        width: 46px;
+        margin-right: 15px;
+        transition: all 1s;
+
+        h5.accordion-heading {
+          white-space: nowrap;
+          margin-bottom: 15px;
+
+          &.vertical {
+            transform: rotate(-90deg);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+          }
+        }
+
+        &.active {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .horizontal-text-accordion-section.small {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "heading"
+      "accordion";
+
+    .heading-wrapper {
+      text-align: center;
+      width: 80%;
+      margin: 30px auto 0;
+    }
+
+    .accordion-wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .accordion {
+        opacity: 1;
+        width: 80% !important;
+        height: 100%;
+        margin: 15px auto 0;
+        display: flex;
+        align-items: center;
+        padding: 0;
+
+        p {
+          margin-top: 10px;
+        }
+
+        h5.accordion-heading {
+          &.vertical {
+            display: none;
+          }
+
+          &.horizontal {
+            font-size: 20px;
+            margin-top: 30px;
+          }
+        }
+
+        .fade {
+          opacity: 1 !important;
+        }
+
+        .content-wrapper {
+          opacity: 1;
+          padding: 0 35px 0;
+        }
+
+        &.active {
+          opacity: 1;
+          width: 80% !important;
+          height: 100%;
+          margin: 15px auto 0;
+          display: flex;
+          align-items: center;
+          padding: 0;
+
+          .content-wrapper {
+            opacity: 1;
+            padding: 0 35px 0;
+          }
+        }
+      }
+    }
+  }
+
+  .horizontal-text-accordion-section.large {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "heading"
+      "accordion";
+
+    .heading-wrapper {
+      text-align: center;
+      width: 80%;
+      margin: 30px auto 0;
+    }
+
+    .accordion-wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .accordion {
+        padding: 5px 10px;
+        width: 80%;
+        margin: 0 auto 20px;
+
+        h5.accordion-heading {
+          white-space: nowrap;
+          margin-bottom: 15px;
+
+          &.vertical {
+            display: none;
+          }
+
+          &.horizontal {
+            position: relative;
+            bottom: 0;
+            margin: 15px 0 5px;
+          }
+        }
+
+        p {
+          margin: 0 0 10px;
+        }
+
+        .content-wrapper {
+          opacity: 1;
+          padding: 0;
+          width: 90%;
+          margin: 0 auto;
+
+          .fade {
+            opacity: 1;
+
+            .iresq-button {
+              margin-bottom: 10px;
+            }
+
+            &.active {
+              opacity: 1;
+            }
+          }
+        }
+
+        &.active {
+          padding: 5px 10px;
+          width: 80%;
+
+          .content-wrapper {
+            padding: 0;
+            opacity: 1;
+            width: 90%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .horizontal-text-accordion-section {
+    .accordion-wrapper {
+      .accordion {
+        &.active {
+          .content-wrapper {
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+}

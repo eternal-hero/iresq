@@ -1,0 +1,61 @@
+.woocommerce-EditAccountForm.edit-account {
+  input[type="text"],
+  input[type="email"] {
+    box-sizing: border-box;
+    height: 41px;
+    border: 1px solid $color-ash;
+    border-radius: 20px;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-size: 16px;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    padding-left: 10px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-left: 20px;
+  }
+
+  fieldset {
+    margin-top: 40px;
+    border: 1px solid $color-ash;
+
+    input[type="password"] {
+      box-sizing: border-box;
+      height: 41px;
+      border: 1px solid $color-ash;
+      border-radius: 20px;
+      background-image: none;
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      font-size: 16px;
+      font-family: "Red Hat Display", sans-serif;
+      font-weight: 700;
+      padding-left: 10px;
+    }
+  }
+
+  button {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    background: $color-white;
+    color: $color-fire;
+    text-decoration: underline;
+    padding: 7px 18px;
+    outline: none;
+
+    &:hover {
+      background: $color-white;
+      color: $color-fire;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# Documentation: https://roots.io/trellis/docs/remote-server-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/production/vault.yml
+
+wordpress_sites:
+  production-iresq.com:
+    site_hosts:
+      - canonical: www.iresq.com
+        redirects:
+          - iresq.com
+          # any other subdomains
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@bitbucket.org:makedigitalgroup/iresq.git # replace with your Git repo URL
+    repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+      hsts_max_age: 31536000
+      hsts_preload: true
+    cache:
+      enabled: true
+      skip_cache_uri: /wp-admin/|/xmlrpc.php/|wp-.*.php|/feed/|index.php|sitemap(_index)?.xml|/store.*|/cart.*|/my-account.*|/checkout.*|/addons.*
+      skip_cache_cooke: comment_author|wordpress_[a-f0-9]+|wp-postpass|wordpress_no_cache|wordpress_logged_in|woocommerce_cart_hash|woocommerce_items_in_cart|wp_woocommerce_session_|edd_items_in_cart

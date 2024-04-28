@@ -1,0 +1,56 @@
+.banner-cta {
+  position: relative;
+  background-size: auto;
+  background-position: 77% 25%;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+
+  @media (max-width: $screen-med) {
+    flex-direction: column;
+    padding: 10px 0 35px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    background-image: linear-gradient(
+      to right,
+      $color-fire 20%,
+      $color-ember 50%,
+      $color-ember 90%,
+      $color-fire 110%
+    );
+  }
+
+  &#services-devices-banner-cta {
+    margin: 75px auto 50px;
+  }
+
+  &-text {
+    color: $color-white;
+    margin-right: 100px;
+
+    @media (max-width: $screen-med) {
+      text-align: center;
+      width: 85%;
+      margin: 32px auto;
+    }
+  }
+
+  &#front-page-banner-cta {
+    margin: 50px 0 100px;
+  }
+}
+
+#services-devices-secondary-banner-cta {
+  margin: 50px 0 100px;
+}

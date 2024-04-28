@@ -1,0 +1,78 @@
+.page-header {
+  text-align: center;
+  color: $color-fire;
+}
+//default template - page.blade.php
+.default-template-content-wrapper {
+  width: 98%;
+  max-width: 1200px;
+  margin: 100px auto;
+
+  @media (max-width: 1300px) {
+    max-width: 1000px;
+  }
+
+  @media (max-width: 1000px) {
+    max-width: 800px;
+  }
+
+  @media (max-width: 900px) {
+    max-width: 80%;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-fire;
+  }
+
+  ul {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  img.alignright {
+    float: right;
+    margin: 0 0 1em 1em;
+  }
+
+  img.alignleft {
+    float: left;
+    margin: 0 1em 1em 0;
+  }
+
+  img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .alignright {
+    float: right;
+  }
+
+  .alignleft {
+    float: left;
+  }
+
+  .aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .default-template-button {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #front-page-left.image-content-left .image-right {
+    object-fit: contain;
+    height: auto;
+    border-radius: 0;
+  }
+  #front-page-left.image-content-left {
+    grid-template-rows: auto;
+  }
+}

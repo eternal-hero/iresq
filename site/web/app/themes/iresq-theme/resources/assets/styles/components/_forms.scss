@@ -1,0 +1,624 @@
+.iresq-text-input {
+  box-sizing: border-box;
+  height: 41px;
+  border: 1px solid $color-ash;
+  border-radius: 20px;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  padding-left: 10px;
+  outline: none;
+}
+
+.iresq-text-input-sm {
+  box-sizing: border-box;
+  height: 31px;
+  border: 1px solid $color-ash;
+  margin-bottom: 3px;
+  border-radius: 20px;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  padding-left: 10px;
+  outline: none;
+}
+
+.iresq-textarea-input {
+  box-sizing: border-box;
+  border: 1px solid $color-ash;
+  border-radius: 20px;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  padding: 10px;
+  outline: none;
+}
+
+#repair-form {
+  margin: 60px auto;
+  max-width: 60%;
+  text-align: center;
+  display: block;
+  grid-template-areas:
+    "go_back"
+    "choices";
+  grid-template-columns: 1fr;
+  grid-template-rows: 22px 1fr;
+  min-height: 30vw;
+
+  .form-go-back {
+    grid-area: go_back;
+    justify-self: start;
+    cursor: pointer;
+    color: $color-fire;
+    text-decoration: underline;
+    transition: color 0.5s;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 400;
+
+    &:hover {
+      color: $color-jet;
+    }
+
+    &.first-page {
+      display: none;
+    }
+  }
+
+  .form-card-wrapper {
+    grid-area: choices;
+
+    .repair-form-title {
+      .previous-page-value {
+        color: $color-fire;
+        text-decoration: underline;
+      }
+    }
+
+    .form-card {
+      margin-bottom: 10px;
+      display: inline-block;
+
+      .card-input {
+        cursor: pointer;
+        box-shadow: 0 4px 9px 0 rgba(51, 49, 50, 0.4);
+        border-radius: 10px;
+        height: 180px;
+        width: 180px;
+        margin: 10px;
+        transition: background 0.5s;
+        display: grid;
+        grid-template-areas:
+          "card_heading"
+          "card_image";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        overflow: hidden;
+
+        .card-heading {
+          grid-area: card_heading;
+          justify-self: start;
+          margin: 10px 10px 0 10px;
+        }
+
+        .card-image {
+          grid-area: card_image;
+          width: 100%;
+        }
+
+        &.model-input {
+          height: auto;
+          grid-template-areas: "card_heading";
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+
+          .card-heading {
+            justify-self: center;
+            align-self: center;
+            margin: 10px;
+          }
+        }
+      }
+
+      .card-input-element {
+        display: none;
+      }
+    }
+  }
+
+  .form-steps {
+    text-align: center;
+    margin-top: 40px;
+
+    .step {
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      border: none;
+      border-radius: 50%;
+      background: $color-slate;
+      opacity: 0.5;
+      transition: background 0.5s;
+
+      &.active-step {
+        opacity: 1;
+      }
+
+      &.valid {
+        background: $color-fire;
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm) {
+    max-width: 100%;
+
+    .form-go-back {
+      justify-self: center;
+    }
+  }
+
+  @media (max-width: $screen-lg) {
+    max-width: 80%;
+  }
+}
+
+.form-error-notice {
+  margin: 100px auto;
+  max-width: 60%;
+  text-align: center;
+
+  .error-location {
+    color: $color-fire;
+    text-decoration: underline;
+  }
+}
+
+#add_payment_method {
+  #payment {
+    background: $color-white;
+
+    .payment_methods {
+      .woocommerce-PaymentMethod {
+        .woocommerce-PaymentBox {
+          background: $color-white;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+#wc-authorize-net-cim-credit-card-credit-card-form {
+  border: none;
+
+  .wc-authorize-net-cim-credit-card-new-payment-method-form {
+    .form-row {
+      .woocommerce-input-wrapper {
+        input {
+          box-sizing: border-box;
+          height: 41px;
+          border: 1px solid $color-ash;
+          border-radius: 20px;
+          background-image: none;
+          background-color: transparent;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          font-size: 16px;
+          font-family: "Red Hat Display", sans-serif;
+          font-weight: 900;
+          padding-left: 10px;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+#customer_login {
+  grid-column: 1 / span 2;
+  width: 80%;
+  margin: 0 auto;
+
+  .u-column1,
+  .u-column2 {
+    .woocommerce-form-login,
+    .woocommerce-form-register {
+      border: none;
+      padding: 0;
+
+      .form-row {
+        label {
+          .required {
+            color: $color-fire;
+          }
+        }
+
+        .woocommerce-button {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          cursor: pointer;
+          border-radius: 29px;
+          width: fit-content;
+          outline: none;
+          font-family: "Red Hat Display", sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 21px;
+          height: 47px;
+          padding: 0 22px;
+          background: $color-jet;
+          color: $color-white;
+          letter-spacing: 0;
+          border: 2px solid $color-jet;
+          transition: all 0.5s ease;
+
+          &:hover {
+            color: $color-jet;
+            background: $color-white;
+          }
+
+          &.woocommerce-form-register__submit {
+            background: linear-gradient(113deg, $color-fire 85%, $color-ember 100%);
+            color: $color-white;
+            letter-spacing: 0;
+            border: 2px solid $color-fire;
+            transition: all 0.5s ease;
+
+            &:hover {
+              color: $color-fire;
+              background: $color-white;
+            }
+          }
+        }
+      }
+
+      .afreg_extra_fields {
+        .form-row {
+          label {
+            .required {
+              color: $color-fire;
+            }
+          }
+
+          .input-select,
+          .input-text {
+            box-sizing: border-box;
+            border: 1px solid $color-ash;
+            border-radius: 20px;
+            background-image: none;
+            background-color: transparent;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            font-size: 16px;
+            font-family: "Red Hat Display", sans-serif;
+            font-weight: 900;
+            padding: 10px;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.woocommerce-Input--text{
+  box-sizing: border-box;
+  border: 1px solid $color-ash;
+  border-radius: 20px;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  padding: 10px;
+  outline: none;
+}
+
+// input[type="checkbox"] {
+//   display: inline-block !important;
+//   width: 20px !important;
+//   height: 20px !important;
+//   background: $color-white;
+//   border-radius: 50%;
+//   vertical-align: middle;
+//   border: 1px solid $color-jet;
+//   -webkit-appearance: none;
+//   outline: none;
+//   cursor: pointer;
+//   transition: all 0.5s ease;
+//   color: $color-white;
+
+//   &:checked {
+//     transition: all 0.5s ease;
+//     background: linear-gradient(180.1deg, #cc4712 0%, #b2111e 100%);
+//     border: none;
+//   }
+// }
+
+.woocommerce-LostPassword a {
+  font-weight: 900;
+  color: $color-ember;
+}
+
+.woocommerce-lost-password {
+  .woocommerce {
+    margin: 70px auto 100px !important;
+
+    .woocommerce-notices-wrapper {
+      grid-column: 1 / span 2;
+    }
+
+    .woocommerce-ResetPassword {
+      grid-column: 1 / span 2;
+      margin: 0 auto;
+      width: 70%;
+      display: grid;
+
+      p:not(.form-row) {
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      .form-row {
+        .woocommerce-Button {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          cursor: pointer;
+          border-radius: 29px;
+          width: fit-content;
+          outline: none;
+          font-family: "Red Hat Display", sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 21px;
+          height: 47px;
+          padding: 0 22px;
+          background: $color-jet;
+          color: $color-white;
+          letter-spacing: 0;
+          border: 2px solid $color-jet;
+          transition: all 0.5s ease;
+
+          &:hover {
+            color: $color-jet;
+            background: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.form-row {
+  label {
+    margin: 0 0 5px 10px;
+  }
+
+  .woocommerce-input-wrapper{
+    textarea {
+      box-sizing: border-box;
+      border: 1px solid $color-ash;
+      border-radius: 20px;
+      background-image: none;
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      font-size: 16px;
+      font-family: "Red Hat Display", sans-serif;
+      font-weight: 900;
+      padding-left: 10px;
+      color: $color-jet;
+      resize: vertical;
+    }
+
+    input[type="password"] {
+      box-sizing: border-box;
+      height: 30px;
+      border: 1px solid $color-ash;
+      border-radius: 20px;
+      background-image: none;
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      font-size: 16px;
+      font-family: "Red Hat Display", sans-serif;
+      font-weight: 900;
+      padding-left: 10px;
+      color: $color-jet;
+    }
+
+    .show-password-input {
+      top: 0.3em;
+    }
+  }
+}
+
+input[type=number] {
+  box-sizing: border-box;
+  height: 41px;
+  width: 90px !important;
+  text-align: start;
+  border-radius: 20px;
+  border: 1px solid $color-ash;
+  background: $color-white;
+  color: $color-ash;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 26px;
+  padding: 7.5px 18.5px;
+  outline: none;
+}
+
+.woocommerce-password-strength {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 0 0 20px 20px;
+  color: $color-marble;
+  transition: display 1s ease-out;
+
+  &.short {
+    background-color: $color-fire;
+    border-color: $color-fire;
+  }
+
+  &.bad {
+    background-color: $color-fire;
+    border-color: $color-fire;
+  }
+
+  &.good {
+    background-color: $color-ember;
+    border-color: $color-ember;
+  }
+
+  &.strong {
+    background-color: $color-slate;
+    border-color: $color-slate;
+  }
+}
+
+.woocommerce-form-login input {
+  box-sizing: border-box;
+  height: 30px;
+  border: 1px solid $color-ash;
+  border-radius: 20px;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  padding-left: 10px;
+  color: $color-jet;
+}
+
+.woocommerce-form.woocommerce-form-login.login .woocommerce-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border-radius: 29px;
+    width: fit-content;
+    outline: none;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    height: 47px;
+    padding: 0 22px;
+    background: $color-jet;
+    color: $color-white;
+    letter-spacing: 0;
+    border: 2px solid $color-jet;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $color-jet;
+      background: $color-white;
+    }
+
+    &.woocommerce-form-register__submit {
+      background: linear-gradient(113deg, $color-fire 85%, $color-ember 100%);
+      color: $color-white;
+      letter-spacing: 0;
+      border: 2px solid $color-fire;
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: $color-fire;
+        background: $color-white;
+      }
+    }
+}
+
+#afreg_select_user_role.input-select {
+  box-sizing: border-box;
+  border: 1px solid $color-ash;
+  border-radius: 20px;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  padding: 10px;
+  outline: none;
+}
+
+.search_keywords input, .search_location input {
+  box-sizing: border-box;
+  border: 1px solid $color-ash;
+  border-radius: 20px;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  padding: 10px;
+  outline: none;
+}
+
+.search_submit input[type=submit] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  border-radius: 29px;
+  width: fit-content;
+  outline: none;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  height: 38px;
+  padding: 0 22px;
+  background: $color-jet;
+  color: $color-white;
+  letter-spacing: 0;
+  border: 2px solid $color-jet;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: $color-jet;
+    background: $color-white;
+  }
+}
+
+.job_filters {
+  background: white;
+}

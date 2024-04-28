@@ -1,0 +1,101 @@
+{
+    "key": "group_5f8746b7ee995",
+    "title": "Post - Single",
+    "fields": [
+        {
+            "key": "field_5f8746e7b7f4d",
+            "label": "Post preview size",
+            "name": "post_preview_size",
+            "type": "select",
+            "instructions": "This will determine the size of the blog post preview on the Expert Advice page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "medium": "Medium",
+                "large": "Large"
+            },
+            "default_value": "medium",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f87477fb7f4e",
+            "label": "Post Preview text",
+            "name": "post_preview_text",
+            "type": "wysiwyg",
+            "instructions": "This text will show only on the expert advice page as a blog preview.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5f8746e7b7f4d",
+                        "operator": "==",
+                        "value": "large"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "media_upload": 0,
+            "toolbar": "full",
+            "delay": 0
+        },
+        {
+            "key": "field_6005b2ad5d01b",
+            "label": "Post CTA",
+            "name": "post_cta",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5fa59d94576bc"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "comments",
+        "categories",
+        "tags"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1628622240
+}

@@ -1,0 +1,43 @@
+{
+    "key": "group_5fb5672ca01d1",
+    "title": "Component - Text Only",
+    "fields": [
+        {
+            "key": "field_5fb5674cf89df",
+            "label": "Text",
+            "name": "text",
+            "type": "textarea",
+            "instructions": "This element will be treated as an H2",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "nowhere",
+                "operator": "nowhere",
+                "value": "nowhere"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1628621738
+}

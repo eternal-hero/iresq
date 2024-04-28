@@ -1,0 +1,22 @@
+{
+    "/js/main.js": "/js/main.js",
+    "/js/customizer.js": "/js/customizer.js",
+    "/js/vue.js": "/js/vue.js",
+    "/dist/css/main.css": "/dist/css/main.css",
+    "/dist/css/critical.css": "/dist/css/critical.css",
+    "/dist/images/chevron-circle-down.png": "/dist/images/chevron-circle-down.png",
+    "/dist/images/isolated-logo-large.png": "/dist/images/isolated-logo-large.png",
+    "/dist/images/isolated-logo-medium.png": "/dist/images/isolated-logo-medium.png",
+    "/dist/images/isolated-logo-small.png": "/dist/images/isolated-logo-small.png",
+    "/dist/images/isolated-logo-white-small.png": "/dist/images/isolated-logo-white-small.png",
+    "/dist/images/make-logo-white.png": "/dist/images/make-logo-white.png",
+    "/dist/images/play.svg": "/dist/images/play.svg",
+    "/dist/images/plus.svg": "/dist/images/plus.svg",
+    "/dist/images/primary-logo-large.png": "/dist/images/primary-logo-large.png",
+    "/dist/images/primary-logo-medium.png": "/dist/images/primary-logo-medium.png",
+    "/dist/images/primary-logo-small.png": "/dist/images/primary-logo-small.png",
+    "/dist/images/secondary-logo-large.png": "/dist/images/secondary-logo-large.png",
+    "/dist/images/secondary-logo-medium.png": "/dist/images/secondary-logo-medium.png",
+    "/dist/images/secondary-logo-small.png": "/dist/images/secondary-logo-small.png",
+    "/dist/images/secondary-logo-white-small.png": "/dist/images/secondary-logo-white-small.png"
+}

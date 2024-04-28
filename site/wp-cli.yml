@@ -1,0 +1,12 @@
+path: web/wp
+server:
+  docroot:web
+
+@development:
+  ssh: vagrant@iresq.local/srv/www/iresq.local/current/
+
+@staging:
+  ssh: iresq@34.70.95.137:62562/www/iresq_529/public/current/
+
+@production:
+  ssh: iresq@34.70.95.137:51075/www/iresq_529/public/current/

@@ -1,0 +1,59 @@
+.find-claim-form {
+  width: 550px;
+  margin: 0 auto 50px;
+  
+  .field-container {
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .field-container label {
+    display: block;
+    float: none;
+    color: #000;
+    font-family: Red Hat Display,sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin: 0 0 2px 20px;
+  }
+
+  .field-container input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    float: none;
+    height: 41px;
+    border: 1px solid #333132;
+    border-radius: 20px;
+    background-color: #fff;
+    padding-left: 19px;
+  }
+
+  .submit-container {
+    padding-top: 15px;
+  }
+
+  .submit-container .button {
+    cursor: pointer;
+    border-radius: 29px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    outline: none;
+    font-family: Red Hat Display,sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    height: 47px;
+    padding: 0 22px;
+    background: -webkit-linear-gradient(337deg,#b2111e 85%,#cc4712);
+    background: -o-linear-gradient(337deg,#b2111e 85%,#cc4712 100%);
+    background: linear-gradient(113deg,#b2111e 85%,#cc4712);
+    color: #fff;
+    letter-spacing: 0;
+    border: 2px solid #b2111e;
+    transition: all .5s ease;
+  }
+}

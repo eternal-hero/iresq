@@ -1,0 +1,323 @@
+.inline-input-group {
+  display: flex;
+  align-items: flex-end;
+  margin: 60px 2% 0 2%;
+
+  @media (max-width: $screen-sm) {
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    margin: 30px auto 0;
+  }
+
+  .iresq-select-input {
+    display: inline-block;
+  }
+
+  .blog-filter-button {
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    margin: 0 0 5px auto;
+    border-radius: 50%;
+    border: 1px solid $color-ash;
+
+    @media (max-width: $screen-sm) {
+      height: 35px;
+      width: 35px;
+      margin: 13px 8px 5px auto;
+    }
+
+    i {
+      height: 80%;
+      width: 80%;
+    }
+  }
+}
+
+h2.no-posts {
+  margin: 75px auto 0;
+  width: 80%;
+  text-align: center;
+
+  span {
+    display: block;
+
+    @media (max-width: $screen-sm) {
+      display: unset;
+    }
+  }
+}
+
+.blog-posts-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: max-content;
+  grid-auto-flow: dense;
+  gap: 60px;
+  margin: 120px 50px;
+
+  @media (max-width: $screen-sm) {
+    gap: 30px;
+    margin: 100px 15px;
+  }
+
+  .expert-advice-post {
+    border-radius: 8px;
+    background-color: $color-white;
+    box-shadow: 0 4px 9px 0 rgba(51, 49, 50, 0.4);
+
+    .blog-post {
+      display: grid;
+
+      .blog-link {
+        position: relative;
+
+        .post-image {
+          grid-area: post_image;
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .video-post {
+          position: absolute;
+          width: auto;
+          height: 35%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .post-content {
+        grid-area: post_content;
+        display: grid;
+
+        .post-title {
+          grid-area: post_title;
+          margin: 0;
+        }
+
+        .post-details {
+          grid-area: post_details;
+          font-size: 13px;
+          font-weight: 700;
+          letter-spacing: 0;
+          line-height: 26px;
+          color: $color-slate;
+          margin-top: 10px;
+        }
+
+        .post-icon {
+          grid-area: post_icon;
+          height: 50px;
+          width: 50px;
+          margin-top: 30px;
+        }
+      }
+
+      &.blog-post-medium {
+        grid-template-areas: "post_image" "post_content";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+
+        .post-image {
+          border-radius: 8px 8px 0 0;
+        }
+
+        .post-content {
+          grid-template-areas: "post_title" "post_details" "post_icon";
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto auto;
+          margin: 30px 60px;
+        }
+      }
+
+      &.blog-post-large {
+        grid-template-areas: "post_image post_content";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+
+        .post-image {
+          border-radius: 8px 0 0 8px;
+        }
+
+        .post-content {
+          grid-template-areas: "post_title" "post_details" "post_text" "post_icon";
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto auto auto;
+          margin: 50px 60px;
+        }
+
+        .post-text {
+          grid-area: post_text;
+        }
+
+        @media (max-width: $screen-sm) {
+          grid-template-areas: "post_image" "post_content";
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr auto;
+
+          .post-image {
+            border-radius: 8px 8px 0 0;
+          }
+
+          .post-content {
+            grid-template-areas: "post_title" "post_details" "post_icon";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            margin: 30px 60px;
+
+            .post-text {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    &.medium {
+      grid-column: span 1;
+
+      @media (max-width: $screen-sm) {
+        grid-column: span 2;
+      }
+    }
+
+    &.large {
+      grid-column: span 2;
+    }
+  }
+}
+
+nav.navigation.pagination {
+  margin: 0 auto 60px;
+  width: max-content;
+
+  .nav-links {
+    font-size: 27px;
+
+    .page-numbers {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      height: 25px;
+      width: 25px;
+      padding: 5px;
+
+      &.next {
+        margin-left: 30px;
+      }
+
+      &.prev {
+        margin-right: 50px;
+      }
+
+      &.current {
+        color: $color-white;
+        background-color: $color-fire;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.single-post-details {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 26px;
+  color: $color-slate;
+  max-width: 900px;
+  width: 94%;
+  margin: 80px auto -50px;
+}
+
+.single-post-content {
+  max-width: 900px;
+  width: 94%;
+  margin: 75px auto 100px;
+
+  h1,
+  h3,
+  h4,
+  h5 {
+    span {
+      font-size: inherit !important;
+      color: inherit !important;
+      font-weight: inherit !important;
+    }
+  }
+
+  h2,
+  p {
+    color: inherit !important;
+    font-weight: inherit !important;
+  }
+
+  blockquote {
+    width: 550px;
+    max-width: 80%;
+    margin: 0 auto 60px;
+
+    i {
+      color: #808a92;
+      font-family: Forum, serif;
+      font-size: 21px;
+      letter-spacing: 0;
+      line-height: 30px;
+      font-style: inherit;
+    }
+
+    p:last-of-type {
+      i {
+        span {
+          color: $color-fire !important;
+          font-family: "Red Hat Display", sans-serif !important;
+          font-size: 16px !important;
+          font-weight: bold !important;
+          letter-spacing: 0 !important;
+          line-height: 26px !important;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1300px) {
+    max-width: 80%;
+
+    img {
+      width: 80%;
+      height: auto;
+    }
+
+    iframe {
+      width: 80%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .blog-posts-wrapper {
+    margin-top: 50px;
+  }
+}
+
+.back-container {
+  text-align: center;
+  margin: 75px auto 100px;
+
+  .back {
+    color: $color-fire;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 26px;
+    text-align: center;
+    text-decoration: underline;
+  }
+}

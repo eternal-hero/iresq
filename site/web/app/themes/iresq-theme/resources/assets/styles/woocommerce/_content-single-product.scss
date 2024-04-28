@@ -1,0 +1,232 @@
+.single-product {
+  .product {
+    .repair-summary-section {
+      display: grid;
+      grid-template-columns: 2fr 1fr 80px;
+      grid-template-rows: 37px 1fr 123px;
+      margin: 120px 80px 120px 0;
+
+      .repair-summary-wrapper {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 3;
+        background: linear-gradient(152.08deg, #cc4712 0%, #b2111e 55%);
+        border-radius: 0 20px 20px 0;
+
+        .repair-summary {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto 89px 89px;
+          grid-template-areas:
+            "repair_title"
+            "repair_text"
+            "repair_time"
+            "repair_complexity";
+          max-width: 40%;
+          margin: 31px auto 80px 160px;
+          gap: 20px 0;
+
+          .repair-summary-title {
+            grid-area: repair_title;
+            color: $color-white;
+            margin: 0;
+          }
+
+          .repair-summary-text {
+            grid-area: repair_text;
+            color: $color-white;
+          }
+
+          .expectation-block {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto auto;
+            background: linear-gradient(358.21deg, #f2f5f7 0%, #fff 100%);
+            border-radius: 8px;
+            width: 100%;
+            height: 89px;
+
+            .bold-text-light {
+              color: $color-slate;
+              font-size: 16px;
+              font-weight: 900;
+              letter-spacing: 0;
+              line-height: 21px;
+              grid-column: 2;
+              grid-row: 1;
+              align-self: end;
+              margin: 0;
+            }
+
+            .light-text-dark {
+              align-self: start;
+              grid-column: 2;
+              grid-row: 2;
+              color: $color-jet;
+              font-size: 20px;
+              font-weight: 500;
+              letter-spacing: 0;
+              line-height: 28px;
+              margin: 0;
+            }
+
+            .block-icon {
+              grid-column: 1;
+              grid-row: 1 / span 2;
+            }
+
+            &.turnaround-time {
+              grid-area: repair_time;
+              margin-bottom: 20px;
+            }
+
+            &.repair-complexity {
+              grid-area: repair_complexity;
+            }
+          }
+        }
+      }
+
+      .entry-summary-wrapper {
+        background: $color-white;
+        grid-column: 2 / span 3;
+        grid-row: 1 / span 2;
+        width: 100%;
+        box-shadow: 4px 3px 15px 0 rgba(199, 202, 205, 0.58);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "repair_summary";
+        justify-items: center;
+
+        .entry-summary {
+          grid-area: repair_summary;
+          margin: 60px;
+          width: auto;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto auto 1fr;
+          grid-template-areas:
+            "product_title"
+            "product_sku"
+            "product_price"
+            "product_summary"
+            "product_form";
+
+          .product_title {
+            grid-area: product_title;
+            margin-bottom: 0;
+            color: $color-jet;
+            font-size: 36px;
+            line-height: 42px;
+          }
+
+          .product-sku {
+            grid-area: product_sku;
+            color: $color-jet;
+            font-weight: bold;
+            margin-bottom: 0;
+          }
+
+          .price {
+            grid-area: product_price;
+            color: $color-ember;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 28px;
+          }
+
+          .woocommerce-product-details__short-description {
+            grid-area: product_summary;
+          }
+
+          .cart {
+            grid-area: product_form;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+              "single_product_quantity"
+              "single_product_sn"
+              "single_product_add_to_bag";
+            margin: 60px 0 0;
+            gap: 15px 0;
+
+            .quantity {
+              grid-area: single_product_quantity;
+            }
+
+            .single_add_to_cart_button {
+              grid-area: single_product_add_to_bag;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              cursor: pointer;
+              border-radius: 29px;
+              width: fit-content;
+              outline: none;
+              font-family: "Red Hat Display", sans-serif;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 21px;
+              height: 47px;
+              padding: 0 22px;
+              background: linear-gradient(113deg, #b2111e 85%, #cc4712 100%);
+              color: $color-white;
+              letter-spacing: 0;
+              border: 2px solid $color-fire;
+              border: none;
+            }
+
+            &::before,
+            &::after {
+              display: none;
+            }
+          }
+
+          .product_meta {
+            display: none;
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        margin: 120px auto 120px;
+
+        .repair-summary-wrapper {
+          grid-column: 1;
+          grid-row: 1;
+          border-radius: 20px;
+
+          .repair-summary {
+            max-width: 90%;
+            margin: 30px auto;
+          }
+        }
+
+        .entry-summary-wrapper {
+          grid-column: 1;
+          grid-row: 2;
+        }
+      }
+    }
+  }
+}
+
+
+.product--select-device label {
+  display: block;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.product--select-device .iresq-select-input {
+  width: inherit;
+}
+
+.single_serial_number label {
+  display: block;
+  width: 100%;
+  margin-bottom: 2px;
+}

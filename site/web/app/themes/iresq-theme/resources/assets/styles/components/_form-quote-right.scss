@@ -1,0 +1,52 @@
+.form-quote-right-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "form quote";
+  align-items: center;
+  box-shadow: 0 6px 14px 0 rgba(128, 138, 146, 0.5);
+  margin: 50px auto;
+
+  .left-form {
+    grid-area: form;
+    width: 50%;
+    justify-self: flex-end;
+    margin: 70px 25px 80px 0;
+  }
+
+  .right-quote {
+    grid-area: quote;
+    width: 95%;
+    margin-left: auto;
+    padding: 25px 0;
+
+    .iresq-quote-wrapper {
+      width: 85%;
+      margin-left: 30px;
+
+      .quote-text {
+        color: $color-slate;
+        font-size: 21px;
+        letter-spacing: 0;
+        line-height: 30px;
+        font-family: Forum, serif;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .form-quote-right-section {
+    grid-template-columns: 1fr;
+    grid-template-areas: "quote" "form";
+    grid-template-rows: auto 1fr;
+
+    .left-form {
+      width: 80%;
+      margin: 0 auto 50px;
+
+      .form-heading {
+        text-align: center;
+      }
+    }
+  }
+}

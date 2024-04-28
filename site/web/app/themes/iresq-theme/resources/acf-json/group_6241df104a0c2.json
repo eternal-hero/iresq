@@ -1,0 +1,69 @@
+{
+    "key": "group_6241df104a0c2",
+    "title": "Product Page Header",
+    "fields": [
+        {
+            "key": "field_6241df4a72e6e",
+            "label": "Product Page Header Title",
+            "name": "product_page_header_title",
+            "type": "text",
+            "instructions": "Use this field to override the product category or single product title.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6241df5672e6f",
+            "label": "Product Page Header Description",
+            "name": "product_page_header_description",
+            "type": "wysiwyg",
+            "instructions": "Use this field to override the product category description.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "product_cat"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1648486735
+}

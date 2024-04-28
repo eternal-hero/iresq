@@ -1,0 +1,83 @@
+.addresses {
+  .woocommerce-Address {
+    .woocommerce-Address-title {
+      h5 {
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    address {
+      font-size: 16px;
+      font-style: normal;
+      letter-spacing: 0;
+      line-height: 26px;
+      font-weight: 400;
+    }
+
+    .edit {
+      color: $color-fire;
+      text-decoration: underline;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+}
+
+.woocommerce-address-fields {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    box-sizing: border-box;
+    height: 41px;
+    border: 1px solid $color-ash;
+    border-radius: 20px;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-size: 16px;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    padding-left: 10px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-left: 20px;
+  }
+
+  select {
+    box-sizing: border-box;
+    border: 1px solid $color-ash;
+    border-radius: 20px;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-size: 16px;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 900;
+    padding: 10px;
+    outline: none;
+  }
+
+  button[name="save_address"] {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    background: $color-white;
+    color: $color-fire;
+    text-decoration: underline;
+    padding: 7px 18px;
+    outline: none;
+
+    &:hover {
+      background: $color-white;
+      color: $color-fire;
+      text-decoration: underline;
+    }
+  }
+}

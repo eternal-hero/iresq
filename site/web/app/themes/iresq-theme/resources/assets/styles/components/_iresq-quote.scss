@@ -1,0 +1,42 @@
+.iresq-quote-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto;
+  gap: 18px 8px;
+  grid-template-areas:
+    "quote_icon quote_text"
+    "quote_icon quote_author";
+
+  .quote-icon {
+    grid-area: quote_icon;
+    font-family: "Forum", sans-serif;
+    font-weight: 400;
+    color: $color-fire;
+    line-height: 70px;
+    font-size: 78px;
+    letter-spacing: 0;
+  }
+
+  .quote-text {
+    grid-area: quote_text;
+
+    p {
+      font-family: "Forum", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: 0;
+      line-height: 30px;
+      color: $color-slate;
+      margin: 0;
+    }
+  }
+
+  .quote-author {
+    grid-area: quote_author;
+    color: $color-fire;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 26px;
+  }
+}

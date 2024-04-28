@@ -1,0 +1,135 @@
+.icon-bullet-list-section {
+  .heading-wrapper {
+    width: 80%;
+    margin: 100px auto 50px;
+    text-align: center;
+
+    span {
+      display: block;
+
+      @media (max-width: $screen-med) {
+        display: unset;
+      }
+    }
+  }
+
+  .icons-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    max-width: 90%;
+    gap: 40px 60px;
+    margin: 0 auto;
+
+    @media (max-width: $screen-sm) {
+      grid-template-columns: 1fr;
+    }
+
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      height: 100%;
+
+      .icon {
+        margin-right: 28px;
+        height: 80px;
+        width: 80px;
+
+        @media (max-width: $screen-sm) {
+          margin-right: 20px;
+        }
+
+        img {
+          height: 100%;
+          width: 80px;
+          object-fit: cover;
+        }
+
+        .red-circle {
+          background-color: $color-ember;
+          height: 80px;
+          width: 80px;
+          border-radius: 50%;
+        }
+      }
+
+      .text-section {
+        position: relative;
+        padding-left: 28px;
+
+        @media (max-width: $screen-sm) {
+          padding-left: 20px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          border-left: 1px solid $color-ember;
+          height: 90%;
+          width: 1px;
+          top: 0;
+          left: 0;
+
+          @media (max-width: $screen-med) {
+            height: 95%;
+          }
+        }
+
+        h5 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .section-link {
+    margin: 60px auto 100px;
+    width: max-content;
+    text-align: center;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .icon-bullet-list-section {
+    .heading-wrapper {
+      width: 90%;
+      margin: 50px auto 50px;
+    }
+
+    .icons-wrapper {
+      grid-template-columns: 1fr;
+
+      .list-item {
+        .icon {
+          margin-right: 20px;
+        }
+
+        .text-section {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .icon-bullet-list-section {
+    .icons-wrapper {
+      .list-item {
+        .icon {
+          height: 50px;
+          width: 50px;
+
+          img {
+            width: 50px;
+          }
+
+          .red-circle {
+            height: 50px;
+            width: 50px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "name": "roots/bedrock",
+  "type": "project",
+  "license": "MIT",
+  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
+  "homepage": "https://roots.io/bedrock/",
+  "authors": [
+    {
+      "name": "Scott Walkinshaw",
+      "email": "scott.walkinshaw@gmail.com",
+      "homepage": "https://github.com/swalkinshaw"
+    },
+    {
+      "name": "Ben Word",
+      "email": "ben@benword.com",
+      "homepage": "https://github.com/retlehs"
+    }
+  ],
+  "keywords": [
+    "bedrock", "composer", "roots", "wordpress", "wp", "wp-config"
+  ],
+  "support": {
+    "issues": "https://github.com/roots/bedrock/issues",
+    "forum": "https://discourse.roots.io/category/bedrock"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "kinsta/kinsta-mu-plugins",
+        "type": "wordpress-muplugin",
+        "version": "2.3.7",
+        "dist": {
+          "url": "https://kinsta.com/kinsta-tools/kinsta-mu-plugins.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.11.4",
+        "type": "wordpress-muplugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.11.4"
+        },
+        "require": {
+          "ffraenz/private-composer-installer": "^5.0",
+          "composer/installers": "^1.4"
+        }
+      }
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:makedigitalgroup/iresq-product-filters.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:makedigitalgroup/woocommerce-gateway-authorize-net-cim.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:makedigitalgroup/b2b.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:makedigitalgroup/fedex-for-woocommerce.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:makedigitalgroup/iresq-usps.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:makedigitalgroup/wpforms-pro.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:makedigitalgroup/modal-cart.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:makedigitalgroup/yaymail.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:makedigitalgroup/iresq-mailchimp-for-wpforms.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:makedigitalgroup/elex-easypost-for-woocommerce-return-labels-addon.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:makedigitalgroup/easypost-woocommerce-shipping.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:makedigitalgroup/wp-job-manager.git"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "composer/installers": "^1.9.0",
+    "vlucas/phpdotenv": "^5.2",
+    "oscarotero/env": "^2.1",
+    "roots/wordpress": "^6.0",
+    "roots/wp-config": "1.0.0",
+    "roots/wp-password-bcrypt": "1.0.0",
+    "roots/bedrock-autoloader": "^1.0",
+    "roots/soil": "^4.0",
+    "kinsta/kinsta-mu-plugins": "2.3.7",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "wpackagist-plugin/aryo-activity-log": "*",
+    "wpackagist-plugin/duplicate-post": "*",
+    "wpackagist-plugin/classic-editor": "*",
+    "wpackagist-plugin/woocommerce": "*",
+    "wpackagist-plugin/jetpack": "*",
+    "wpackagist-plugin/svg-support": "*",
+    "wpackagist-plugin/advanced-woo-search": "*",
+    "wpackagist-plugin/relevanssi": "*",
+    "wpackagist-plugin/woocommerce-services": "*",
+    "makedigitalgroup/iresq-product-filters": "1.2.4",
+    "makedigitalgroup/woocommerce-gateway-authorize-net-cim": "^3.4.0",
+    "makedigitalgroup/b2b": "dev-master",
+    "makedigitalgroup/wpforms-pro": "dev-main",
+    "makedigitalgroup/iresq-usps": "^4.4.49",
+    "makedigitalgroup/modal-cart": "^1.1.8",
+    "makedigitalgroup/yaymail": "*",
+    "wpackagist-plugin/term-management-tools":"*",
+    "wpackagist-plugin/product-import-export-for-woo":"*",
+    "makedigitalgroup/iresq-mailchimp-for-wpform": "^1.4.2",
+    "makedigitalgroup/elex-easypost-for-woocommerce-return-labels-addon": "*",
+    "makedigitalgroup/easypost-woocommerce-shipping": "*",
+    "makedigitalgroup/wp-job-manager": "*",
+    "wpackagist-plugin/custom-order-numbers-for-woocommerce": "*",
+    "wpackagist-plugin/members": "*",
+    "wpackagist-plugin/woocommerce-google-analytics-integration":"*",
+    "wpackagist-plugin/seo-by-rank-math":"*",
+    "wpackagist-plugin/kadence-woocommerce-email-designer":"*",
+    "wpackagist-plugin/wc-abandoned-carts-by-small-fish-analytics":"*",
+    "wpackagist-plugin/mailchimp-for-woocommerce":"*",
+    "wpackagist-plugin/export-import-menus":"*",
+    "wpackagist-plugin/wp-all-export":"*",
+    "wpackagist-plugin/wp-crontrol":"*",
+    "wpackagist-plugin/wp-import-export-lite":"*",
+    "wpackagist-plugin/wp-smushit":"*",
+    "wpackagist-plugin/taxonomy-terms-order":"*",
+    "humanmade/wordpress-importer": "dev-master"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.5.8",
+    "roave/security-advisories": "dev-master",
+    "cweagans/composer-patches": "^1.7"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "composer/installers": true,
+      "ffraenz/private-composer-installer": true,
+      "roots/wordpress-core-installer": true,
+      "cweagans/composer-patches": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\""
+    ],
+    "test": [
+      "phpcs"
+    ]
+  }
+}

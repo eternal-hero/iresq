@@ -1,0 +1,602 @@
+.woocommerce-cart {
+  .woocommerce-cart-form {
+    font-size: 16px;
+    max-width: 90%;
+    margin: 0 auto;
+
+    .woocommerce-cart-form__contents {
+      border: none;
+      border-spacing: 12px;
+
+      thead {
+        tr {
+          th {
+            font-weight: 500;
+            font-size: 20px;
+          }
+        }
+      }
+
+      tbody {
+        td {
+          border: none;
+        }
+
+        .item-by-serial-number {
+          td {
+            text-align: left !important;
+
+            .item-serial-number {
+              text-decoration: underline;
+              font-weight: 900;
+              color: $color-fire;
+              font-size: 14px;
+              margin: 0;
+            }
+
+            &::before {
+              display: none;
+            }
+          }
+        }
+
+        .cart_item {
+          box-shadow: 0 3px 6px 0 rgba(128, 138, 146, 0.5);
+          margin-bottom: 12px;
+
+          td {
+            font-size: 16px;
+            letter-spacing: 0;
+            line-height: 26px;
+            font-weight: 400;
+            padding: 7px 18px;
+          }
+
+          .product-name {
+            .cart-serial-wrapper {
+              position: relative;
+              display: inline-block;
+
+              .cart-serial-number {
+                text-decoration: underline;
+                font-weight: 900;
+                color: $color-fire;
+                font-size: 14px;
+                margin: 0 15px 0 0;
+              }
+
+              #new_serial_number {
+                display: none;
+                grid-template-areas: "new_sn" "submit_sn";
+                grid-template-rows: auto auto;
+                grid-template-columns: 1fr;
+
+                .new-serial-number {
+                  grid-area: new_sn;
+                  margin: 0 15px 0 0;
+                  height: 30px;
+                  border-bottom: 1px solid $color-fire;
+                  border-top: none;
+                  border-right: none;
+                  border-left: none;
+                  box-sizing: border-box;
+                  background-image: none;
+                  -webkit-box-shadow: none;
+                  -moz-box-shadow: none;
+                  box-shadow: none;
+                  font-size: 14px;
+                  font-family: "Red Hat Display", sans-serif;
+                  font-weight: 900;
+                  padding-left: 10px;
+                  outline: none;
+                  background-color: rgba(128, 138, 146, 0.1);
+                }
+
+                .submit-new-serial-number {
+                  grid-area: submit_sn;
+                  justify-self: start;
+                  cursor: pointer;
+                  text-decoration: underline;
+                  font-size: 14px;
+                  color: $color-jet;
+                  font-weight: 900;
+                  transition: color 1s ease;
+                  margin: 0 15px 0 0;
+
+                  &:hover {
+                    color: $color-fire;
+                  }
+                }
+              }
+
+              .edit-serial-number {
+                position: absolute;
+                bottom: 60%;
+                right: 0%;
+                cursor: pointer;
+                background: $color-jet;
+                color: $color-marble;
+                width: 10px;
+                height: 10px;
+                font-size: 10px;
+                border-radius: 50%;
+                text-align: center;
+                vertical-align: middle;
+                padding: 5px;
+                line-height: 10px;
+
+                &.fa-times {
+                  color: $color-fire;
+                }
+              }
+
+              @media (max-width: $screen-med) {
+                margin-top: 10px;
+              }
+            }
+          }
+
+          .product-subtotal {
+            font-weight: 900;
+          }
+        }
+
+        .actions {
+          padding: 9px 0;
+
+          .coupon {
+            #coupon_code {
+              box-sizing: border-box;
+              height: 41px;
+              width: auto;
+              border: 2px solid $color-ash;
+              border-radius: 20px;
+              background-image: none;
+              background-color: transparent;
+              -webkit-box-shadow: none;
+              -moz-box-shadow: none;
+              box-shadow: none;
+              font-size: 16px;
+              font-family: "Red Hat Display", sans-serif;
+              font-weight: 900;
+              padding-left: 10px;
+              color: $color-jet;
+            }
+
+            button {
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              cursor: pointer;
+              border-radius: 29px;
+              width: fit-content;
+              outline: none;
+              font-family: "Red Hat Display", sans-serif;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 21px;
+              height: 41px;
+              padding: 0 22px;
+              background: linear-gradient(113deg, $color-fire 85%, $color-ember 100%);
+              color: $color-white;
+              letter-spacing: 0;
+              border: 2px solid $color-fire;
+            }
+          }
+
+          button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+            border-radius: 29px;
+            width: fit-content;
+            outline: none;
+            font-family: "Red Hat Display", sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 21px;
+            height: 41px;
+            padding: 0 22px;
+            background: $color-jet;
+            color: $color-white;
+            letter-spacing: 0;
+            border: 2px solid $color-jet;
+          }
+
+          @media (max-width: $screen-sm) {
+            display: grid;
+            grid-template-areas:
+              "update_action"
+              "return_action"
+              "coupon_actions";
+            grid-template-columns: 1fr;
+            gap: 20px;
+            justify-items: center;
+
+            #update-cart {
+              grid-area: update_action;
+              width: 100%;
+            }
+
+            .cart_return-to-shop {
+              grid-area: return_action;
+              width: 100%;
+
+              .iresq-button {
+                width: 100%;
+              }
+            }
+
+            .coupon {
+              grid-area: coupon_actions;
+              margin-top: 20px;
+
+              #coupon_code {
+                width: 100%;
+                margin-bottom: 20px;
+              }
+
+              .button {
+                width: 100%;
+                float: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cart-collaterals {
+    .cart_totals {
+      float: none;
+      width: 80%;
+      margin: 0 auto;
+      font-size: 16px;
+      display: grid;
+      grid-template-areas:
+        "header"
+        "shop_table"
+        "proceed";
+
+      h5 {
+        grid-area: header;
+      }
+
+      .shop_table {
+        grid-area: shop_table;
+        border: none;
+
+        td {
+          border: none;
+        }
+      }
+
+      .wc-proceed-to-checkout {
+        grid-area: proceed;
+        justify-self: end;
+
+        .checkout-button {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          cursor: pointer;
+          border-radius: 29px;
+          width: fit-content;
+          outline: none;
+          font-family: "Red Hat Display", sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 21px;
+          padding: 12px 22px;
+          background: linear-gradient(113deg, #b2111e 85%, #cc4712 100%);
+          color: $color-white;
+          letter-spacing: 0;
+          border: 2px solid $color-fire;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .cart-empty {
+    margin: 20px auto;
+    max-width: 40%;
+    text-align: center;
+  }
+
+  .return-to-shop {
+    text-align: center;
+
+    a {
+      cursor: pointer;
+      border-radius: 29px;
+      width: fit-content;
+      outline: none;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 13px 22px;
+      background: $color-jet;
+      color: $color-white;
+      letter-spacing: 0;
+      border: 2px solid $color-jet;
+      transition: all 0.5s;
+
+      &:hover {
+        color: $color-jet;
+        background: $color-white;
+      }
+    }
+  }
+}
+
+.wcspc-area-bot .wcspc-continue span {
+  color: #000000 !important;
+}
+
+.wcspc-item-title .cart-serial-wrapper {
+  display: none;
+}
+
+.woocommerce-form-coupon-toggle {
+  display: none;
+}
+
+/**
+* New Cart Design
+**/
+
+.cart {
+  .cart-table-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .device-cart-container .device-details {
+    padding-bottom: 12px;
+  }
+
+  .device-cart-container {
+    box-shadow: 0 3px 6px 0 rgba(128, 139, 147, 0.5);
+    margin-bottom: 12px;
+    padding: 20px 30px 0px;
+  }
+
+  .device-cart-container .device-part-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .cart-table-header {
+    padding: 0 30px 10px;
+  }
+
+  .device-part-container .product-remove,
+  .cart-table-header .product-remove {
+    width: 50px;
+  }
+
+  .cart-table-header .product-name,
+  .device-part-container .product-name {
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+
+  .device-part-container .product-name {
+    font-weight: 300;
+  }
+
+  .cart-table-header .product-subtotal,
+  .device-part-container .product-subtotal {
+    width: 82px;
+    text-align: right;
+  }
+
+  .cart-table-header .product-price,
+  .device-part-container .product-price {
+    width: 100px;
+    padding-right: 20px;
+    text-align: right;
+  }
+
+  .device-part-container .product-price {
+    font-weight: 300;
+  }
+
+  .cart-table-header .product-quantity,
+  .device-part-container .product-quantity {
+    width: 110px;
+    text-align: center;
+  }
+
+  .device-part-container .product-quantity {
+    font-weight: 300;
+  }
+  
+  .cart-table-header .product-subtotal,
+  .device-part-container .product-subtotal {
+    width: 100px;
+  }
+
+  .cart-table-header .product-thumbnail,
+  .device-part-container .product-thumbnail img {
+    width: 32px;
+    height: auto;
+  }
+
+  .serial-number-container {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .serial-number-container .serial-number-label {
+    width: 325px;
+    text-align: center;
+  }
+
+  .serial-number-container .serial-number-input {
+    flex-shrink: 1;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .serial-number-explanation {
+    flex-grow: 1;
+    font-weight: 300;
+    padding-left: 15px;
+  }
+
+  .serial-number-container .serial-number-input input {
+    box-sizing: border-box;
+    height: 41px;
+    width: auto;
+    border: 2px solid #333132;
+    border-radius: 20px;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
+    font-size: 16px;
+    font-family: Red Hat Display,sans-serif;
+    font-weight: 900;
+    padding-left: 10px;
+    color: #000;
+  }
+
+  .serial-number-container .serial-number-input input:focus-visible {
+    outline: none;
+  }
+
+  @media (max-width: 500px) {
+    .cart-table-header {
+      display: none;
+    }
+
+    .serial-number-container {
+      flex-wrap: wrap;
+    }
+
+    .device-part-container .product-quantity,
+    .device-part-container .product-price {
+      display: none;
+    }
+  }
+}
+
+.woocommerce-cart .cart .actions {
+  padding: 9px 0;
+  display: flex;
+  justify-content: space-between;
+
+  .coupon {
+    label {
+      display: none;
+    }
+
+    #coupon_code {
+      box-sizing: border-box;
+      height: 41px;
+      width: auto;
+      border: 2px solid $color-ash;
+      border-radius: 20px;
+      background-image: none;
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      font-size: 16px;
+      font-family: "Red Hat Display", sans-serif;
+      font-weight: 900;
+      padding-left: 10px;
+      color: $color-jet;
+    }
+
+    button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      cursor: pointer;
+      border-radius: 29px;
+      width: fit-content;
+      outline: none;
+      font-family: "Red Hat Display", sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+      height: 41px;
+      padding: 0 22px;
+      background: linear-gradient(113deg, $color-fire 85%, $color-ember 100%);
+      color: $color-white;
+      letter-spacing: 0;
+      border: 2px solid $color-fire;
+    }
+  }
+
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border-radius: 29px;
+    width: fit-content;
+    outline: none;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    height: 41px;
+    padding: 0 22px;
+    background: $color-jet;
+    color: $color-white;
+    letter-spacing: 0;
+    border: 2px solid $color-jet;
+  }
+
+  @media (max-width: $screen-sm) {
+    display: grid;
+    grid-template-areas:
+      "update_action"
+      "return_action"
+      "coupon_actions";
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+
+    #update-cart {
+      grid-area: update_action;
+      width: 100%;
+    }
+
+    .cart_return-to-shop {
+      grid-area: return_action;
+      width: 100%;
+
+      .iresq-button {
+        width: 100%;
+      }
+    }
+
+    .coupon {
+      grid-area: coupon_actions;
+      margin-top: 20px;
+
+      #coupon_code {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .button {
+        width: 100%;
+        float: none;
+      }
+    }
+  }
+}
+
+.shipping-group-title {
+  font-weight: bold;
+  margin-bottom: 3px !important;
+}
+
+.shipping-group-title:not(:first-child) {
+  margin-top: 30px !important;
+}

@@ -1,0 +1,14 @@
+--- class-aftax-front.php	2023-05-15 13:53:40.000000000 -0500
++++ class-aftax-front-fixed.php	2023-05-15 14:00:42.000000000 -0500
+@@ -240,6 +240,11 @@
+ 			} else {
+ 				if ( 'yes' != get_option( 'aftax_enable_auto_tax_exempttion' ) ) {
+ 					$aftax_exempted_user_roles = ( get_option( 'aftax_exempted_user_roles' ) );
++
++					if ( !$aftax_exempted_user_roles ) {
++						return;
++					}
++					
+ 					if ( in_array( 'guest', $aftax_exempted_user_roles ) ) {
+ 						?>
+ 						<div id="tax_exemption_checkbox_div">

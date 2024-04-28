@@ -1,0 +1,198 @@
+.iresq-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  border-radius: 29px;
+  width: fit-content;
+  outline: none;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  height: 47px;
+  padding: 0 22px;
+  
+  &.solid-red {
+    background: linear-gradient(113deg, $color-fire 85%, $color-ember 100%);
+    color: $color-white;
+    letter-spacing: 0;
+    border: 2px solid $color-fire;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $color-fire;
+      background: transparent;
+    }
+
+    &#header-repair-link:hover {
+      background: $color-white;
+    }
+
+    &#header-browse-link:hover {
+      background: $color-white;
+    }
+
+    &#content-left-button:hover {
+      background: $color-white;
+    }
+
+    &#content-right-button:hover {
+      background: $color-white;
+    }
+  }
+
+  &.solid-light {
+    background: $color-white;
+    color: $color-jet;
+    letter-spacing: 0;
+    border: 2px solid $color-white;
+    border: none;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $color-white;
+      background: $color-jet;
+    }
+  }
+
+  &.solid-dark {
+    background: $color-jet;
+    color: $color-white;
+    letter-spacing: 0;
+    border: 2px solid $color-jet;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $color-jet;
+      background: transparent;
+    }
+
+    &#announcement_banner_link {
+      padding: 0 11px;
+      font-size: 13px;
+      height: 30px;
+
+      &:hover {
+        background: $color-white;
+      }
+    }
+  }
+
+  &.outlined-red {
+    text-align: center;
+    color: $color-fire;
+    border: 2px solid $color-fire;
+    background: transparent;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $color-white;
+      background: $color-fire;
+    }
+  }
+
+  &.outlined-dark {
+    text-align: center;
+    color: $color-jet;
+    border: 2px solid $color-jet;
+    background: transparent;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $color-white;
+      background: $color-jet;
+    }
+  }
+
+  &.outlined-light {
+    text-align: center;
+    color: $color-white;
+    border: 2px solid $color-white;
+    background: transparent;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $color-fire;
+      background: $color-white;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .iresq-button {
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    height: 41px;
+    padding: 0 12px;
+
+    &.solid-red {
+      &:hover {
+        background: linear-gradient(113deg, $color-fire 85%, $color-ember 100%);
+        color: $color-white;
+      }
+
+      &#header-repair-link:hover {
+        background: linear-gradient(113deg, $color-fire 85%, $color-ember 100%);
+        color: $color-white;
+      }
+
+      &#header-browse-link:hover {
+        background: linear-gradient(113deg, $color-fire 85%, $color-ember 100%);
+        color: $color-white;
+      }
+
+      &#content-left-button:hover {
+        background: linear-gradient(113deg, $color-fire 85%, $color-ember 100%);
+        color: $color-white;
+      }
+
+      &#content-right-button:hover {
+        background: linear-gradient(113deg, $color-fire 85%, $color-ember 100%);
+        color: $color-white;
+      }
+    }
+
+    &.solid-light {
+      &:hover {
+        background: $color-white;
+        color: $color-jet;
+      }
+    }
+
+    &.solid-dark {
+      &:hover {
+        background: $color-jet;
+        color: $color-white;
+      }
+
+      &#announcement_banner_link {
+        &:hover {
+          background: $color-jet;
+          color: $color-white;
+        }
+      }
+    }
+
+    &.outlined-red {
+      &:hover {
+        color: $color-fire;
+        background: transparent;
+      }
+    }
+
+    &.outlined-dark {
+      &:hover {
+        color: $color-jet;
+        background: transparent;
+      }
+    }
+
+    &.outlined-light {
+      &:hover {
+        color: $color-white;
+        background: transparent;
+      }
+    }
+  }
+}

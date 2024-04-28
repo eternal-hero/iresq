@@ -1,0 +1,169 @@
+.woocommerce-order-pay {
+  .shop_table {
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 -1px 24px 0;
+    text-align: left;
+    width: 100%;
+    border-collapse: separate;
+    border-radius: 5px;
+  }
+
+  .shop_table .item-by-serial-number td {
+    font-weight: 600;
+  }
+
+  .shop_table .item-by-serial-number .item-serial-number {
+    text-decoration: underline;
+    font-weight: 900;
+    color: #b2111e;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .shop_table td {
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding: 9px 12px;
+    vertical-align: middle;
+    line-height: 1.5em;
+  }
+
+  .shop_table .product-total {
+    text-align: right;
+    padding: 13px 25px 0 0;
+  }
+
+  .shop_table td.product-name {
+    border-top: none;
+    padding-left: 5em;
+  }
+
+  .shop_table .cart_item td {
+    border-top: none;
+  }
+
+  .woocommerce button.button.alt {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border-radius: 29px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    outline: none;
+    font-family: Red Hat Display,sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    height: 47px;
+    padding: 0 22px;
+    background: -webkit-linear-gradient(337deg,#b2111e 85%,#cc4712);
+    background: -o-linear-gradient(337deg,#b2111e 85%,#cc4712 100%);
+    background: linear-gradient(113deg,#b2111e 85%,#cc4712);
+    color: #fff;
+    letter-spacing: 0;
+    border: 2px solid #b2111e;
+  }
+
+  #payment {
+    background: $color-white;
+    box-shadow: 0 3px 6px 0 rgba(128, 138, 146, 0.5);
+
+    .wc_payment_methods {
+      .wc_payment_method {
+        .payment_box {
+          background: $color-white;
+          color: $color-jet;
+
+          .form-row {
+            .sv-wc-payment-gateway-payment-form-manage-payment-methods {
+              cursor: pointer;
+              border-radius: 29px;
+              width: fit-content;
+              outline: none;
+              font-family: "Red Hat Display", sans-serif;
+              font-weight: 700;
+              line-height: 21px;
+              padding: 15px 22px;
+              color: $color-jet;
+              border: 2px solid $color-jet;
+              background: transparent;
+              transition: all 0.5s ease;
+
+              &:hover {
+                color: $color-white;
+                background: $color-jet;
+              }
+            }
+          }
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .place-order {
+      .custom-checkboxes {
+        .woocommerce-form__label {
+          display: block;
+          padding-right: 10px;
+          padding-left: 22px;
+          text-indent: -22px;
+
+          .woocommerce-form__input {
+            vertical-align: middle;
+
+            span {
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+
+      .woocommerce-terms-and-conditions-wrapper {
+        .woocommerce-privacy-policy-text {
+          padding-left: 22px;
+        }
+
+        .form-row {
+          .woocommerce-form__label {
+            display: block;
+            padding-right: 10px;
+            padding-left: 22px;
+            text-indent: -22px;
+
+            .woocommerce-form__input {
+              vertical-align: middle;
+
+              span {
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+
+      #place_order {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        border-radius: 29px;
+        width: fit-content;
+        outline: none;
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        height: 47px;
+        padding: 0 22px;
+        background: linear-gradient(113deg, $color-fire 85%, $color-ember 100%);
+        color: $color-white;
+        letter-spacing: 0;
+        border: 2px solid $color-fire;
+      }
+    }
+  }
+}

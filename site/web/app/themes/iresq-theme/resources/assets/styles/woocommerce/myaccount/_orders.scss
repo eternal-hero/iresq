@@ -1,0 +1,50 @@
+.my_account_orders.account-orders-table {
+  border: none !important;
+  border-spacing: 12px;
+
+  thead {
+    font-size: 22px;
+    color: $color-jet;
+    font-weight: 700px;
+    letter-spacing: 0;
+    line-height: 26px;
+
+    .woocommerce-orders-table__header-order-actions {
+      display: none;
+    }
+  }
+
+  tbody {
+    tr {
+      box-shadow: 0 3px 6px 0 rgba(128, 138, 146, 0.5);
+      margin-bottom: 12px;
+
+      td {
+        border: none;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 26px;
+        font-weight: 400;
+        padding: 7px 18px;
+
+        &.woocommerce-orders-table__cell-order-number {
+          font-weight: 700;
+        }
+
+        &.woocommerce-orders-table__cell-order-actions {
+          text-align: right;
+
+          a {
+            font-family: "Red Hat Display", sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            background: $color-white;
+            color: $color-fire;
+            text-decoration: underline;
+            padding: 7px 18px;
+          }
+        }
+      }
+    }
+  }
+}

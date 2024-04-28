@@ -1,0 +1,75 @@
+.devices-table {
+  border-collapse: collapse;
+  margin-right: 30px;
+
+  .devices-table-row {
+    border-bottom: 1px solid $color-slate;
+
+    th {
+      text-align: left;
+      padding: 0 7px 0 18px;
+
+      h6 {
+        margin: 12.5px 0;
+      }
+    }
+  }
+
+  .device-row {
+    border-bottom: 1px solid #f2f5f7;
+
+    td {
+      padding: 0 7px 0 18px;
+      color: $color-jet;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 26px;
+
+      p {
+        margin: 7.5px 0;
+      }
+
+      &.device-link {
+        text-align: right;
+
+        .device-link-text {
+          color: $color-fire;
+          font-weight: 700;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 26px;
+          text-decoration: underline;
+          transition: color 0.5s;
+
+          &:hover {
+            color: $color-jet;
+          }
+        }
+      }
+
+      &.device-delete {
+        text-align: right;
+
+        #device-delete-button {
+          font-family: "Red Hat Display", sans-serif;
+          font-size: 16px;
+          line-height: 26px;
+          color: $color-fire;
+          background: transparent;
+          font-weight: 700;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          border: none;
+          text-decoration: underline;
+          outline: none;
+          cursor: pointer;
+          transition: color 0.5s;
+
+          &:hover {
+            color: $color-jet;
+          }
+        }
+      }
+    }
+  }
+}

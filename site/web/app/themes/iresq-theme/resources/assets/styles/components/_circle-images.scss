@@ -1,0 +1,31 @@
+.circle-images {
+  background-color: $color-marble;
+  margin: 30px auto;
+
+  .circle-images-heading {
+    text-align: center;
+    padding-top: 90px;
+    margin: 0 auto 50px;
+  }
+
+  .circle-images-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    padding-bottom: 100px;
+    margin: 0 auto;
+
+    .circle-image {
+      border-radius: 50%;
+      width: 152px;
+      height: 152px;
+      box-shadow: 0 3px 6px 1px rgba(51, 49, 50, 0.3);
+
+      &:not(:last-of-type) {
+        margin-right: 39px;
+      }
+    }
+  }
+}

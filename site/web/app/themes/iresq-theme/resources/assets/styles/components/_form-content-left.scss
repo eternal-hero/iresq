@@ -1,0 +1,96 @@
+.form-content-left-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "left_content right_form";
+  align-items: flex-start;
+  padding-bottom: 100px;
+
+  .left-content {
+    grid-area: left_content;
+    width: 80%;
+    max-width: 500px;
+    margin: 0 50px 0 auto;
+
+    h2 {
+      margin: 75px auto 30px 0;
+    }
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+
+      li {
+        color: $color-slate;
+        background-color: $color-marble;
+        margin: 15px auto 0;
+        padding: 10px 20px;
+
+        &:first-of-type {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+
+  .right-form {
+    grid-area: right_form;
+    width: 50%;
+    max-width: 560px;
+    margin: 0 auto 0 50px;
+    margin: 0 auto;
+    background-color: $color-white;
+    box-shadow: 0 6px 14px 0 rgba(128, 138, 146, 0.5);
+    padding: 35px 75px 50px;
+
+    .form-heading {
+      color: $color-slate;
+      margin: 0 0 20px;
+
+      span {
+        display: block;
+      }
+    }
+
+    .form-body {
+      .iresq-button {
+        margin: 50px auto 0;
+      }
+    }
+  }
+
+  &#services-devices-form-content-left {
+    margin-top: 100px;
+  }
+
+  &#contact-us-form-content-left {
+    margin-top: 50px;
+  }
+
+  &#free-estimate-form-content-left {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .form-content-left-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "left_content"
+      "right_form";
+
+    .left-content {
+      margin: 0 auto 50px;
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    .right-form {
+      width: 65%;
+      padding: 30px 50px 35px;
+    }
+  }
+}

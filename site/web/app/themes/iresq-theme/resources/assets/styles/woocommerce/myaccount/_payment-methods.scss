@@ -1,0 +1,102 @@
+.woocommerce-payment-methods .woocommerce-MyAccount-content {
+  .woocommerce-MyAccount-paymentMethods {
+    border: none !important;
+    border-spacing: 12px;
+
+    thead {
+      font-size: 18px;
+      color: $color-jet;
+      font-weight: 700px;
+      letter-spacing: 0;
+      line-height: 26px;
+    }
+
+    tbody {
+      tr {
+        box-shadow: 0 3px 6px 0 rgba(128, 138, 146, 0.5);
+        margin-bottom: 12px;
+
+        td {
+          border: none;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 26px;
+          font-weight: 400;
+          padding: 7px 18px;
+
+          &.payment-method-default {
+            .default {
+              color: $color-jet;
+              background-color: transparent;
+              text-transform: initial;
+              text-decoration: underline;
+              font-size: 16px;
+              letter-spacing: 0;
+              line-height: 26px;
+              font-weight: 700;
+            }
+          }
+
+          &.payment-method-actions {
+            text-align: right;
+
+            a.button {
+              cursor: pointer;
+              border-radius: 29px;
+              width: fit-content;
+              outline: none;
+              font-family: "Red Hat Display", sans-serif;
+              font-weight: 700;
+              font-size: 16px;
+              padding: 7px 22px;
+              text-align: center;
+              height: auto;
+              color: $color-jet;
+              border: 2px solid $color-jet;
+              background: transparent;
+              transition: all 0.5s ease;
+
+              &:hover {
+                color: $color-white;
+                background: $color-jet;
+              }
+
+              &.default {
+                color: $color-fire;
+                border: 2px solid $color-fire;
+
+                &:hover {
+                  color: $color-white;
+                  background: $color-fire;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .button {
+    cursor: pointer;
+    border-radius: 29px;
+    width: fit-content;
+    outline: none;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    height: auto;
+    padding: 15px 22px;
+    background: linear-gradient(113deg, $color-fire 85%, $color-ember 100%);
+    color: $color-white;
+    letter-spacing: 0;
+    border: 2px solid $color-fire;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $color-fire;
+      background: $color-white;
+    }
+  }
+}
